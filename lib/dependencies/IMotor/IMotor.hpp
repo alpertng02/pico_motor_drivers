@@ -17,7 +17,7 @@ namespace Motor {
 
         virtual void setMaxSpeed(float dutyCycle) = 0;
 
-        virtual ~IMotor();
+        virtual ~IMotor() = default;
 
         enum {
             UnsetPin = UINT16_MAX

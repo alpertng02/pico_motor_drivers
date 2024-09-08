@@ -4,7 +4,6 @@ add_library(pico_IMotor INTERFACE)
 # Specify the source files for the pico-stepper library
 target_sources(pico_IMotor INTERFACE 
     IMotor.hpp
-    IMotor.cpp
 )
 
 # Include the current source directory for header files
