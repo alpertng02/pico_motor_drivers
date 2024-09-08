@@ -1,9 +1,9 @@
 #ifndef IMOTOR_HPP
 #define IMOTOR_HPP
 
-#include "pico.h"
+#include "pico/types.h"
 
-namespace Motor {
+namespace motor {
 
     class IMotor {
 

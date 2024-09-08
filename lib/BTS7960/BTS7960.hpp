@@ -4,7 +4,7 @@
 #include "IMotor.hpp"
 #include "PwmController.hpp"
 
-namespace Motor {
+namespace motor {
 
     class BTS7960 : public IMotor {
 

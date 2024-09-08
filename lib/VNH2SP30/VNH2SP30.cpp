@@ -3,7 +3,7 @@
 #include "hardware/gpio.h"
 #include "hardware/adc.h"
 
-namespace Motor {
+namespace motor {
     VNH2SP30::VNH2SP30(uint inA, uint inB, uint pwm, uint cs, uint en, uint32_t frequency) : mInA(inA), mInB(inB), mPwm(pwm, frequency), mCs(cs), mEn(en) {
         gpio_init(mInA);
         gpio_set_dir(mInA, GPIO_OUT);

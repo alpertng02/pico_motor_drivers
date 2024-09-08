@@ -4,7 +4,7 @@
 #include "IMotor.hpp"
 #include "PwmController.hpp"
 
-namespace Motor {
+namespace motor {
 
     class VNH2SP30 : public IMotor {
 

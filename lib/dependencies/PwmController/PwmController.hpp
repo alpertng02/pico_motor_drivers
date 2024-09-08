@@ -3,7 +3,7 @@
 
 #include "hardware/pwm.h"
 
-namespace Motor {
+namespace motor {
     class PwmController {
 
     public:

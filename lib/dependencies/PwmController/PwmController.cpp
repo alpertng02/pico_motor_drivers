@@ -2,7 +2,7 @@
 #include "hardware/clocks.h"
 #include "hardware/gpio.h"
 
-namespace Motor {
+namespace motor {
     PwmController::PwmController(uint pwmPin, uint32_t frequency) : mPin(pwmPin), mSlice(pwm_gpio_to_slice_num(pwmPin)), mChan(pwm_gpio_to_channel(pwmPin)), mClockDiv(1.0f) {
         gpio_set_function(pwmPin, GPIO_FUNC_PWM);
 

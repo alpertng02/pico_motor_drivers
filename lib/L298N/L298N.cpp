@@ -2,7 +2,7 @@
 
 #include "hardware/gpio.h"
 
-namespace Motor {
+namespace motor {
 
     L298N::L298N(uint in1, uint in2, uint en, uint32_t frequency) : mIn1(in1, frequency), mIn2(in2, frequency), mEn(en) {
         gpio_init(mEn);
@@ -14,9 +14,9 @@ namespace Motor {
         gpio_put(mEn, dutyCycleScl != 0);
         if (dutyCycleScl >= 0) {
             mIn1.setDutyCycle(static_cast<uint32_t>(dutyCycleScl));
-            mIn2.setDutyCycle(0lu);
+            mIn2.setDutyCycle(static_cast<uint32_t>(0));
         } else {
-            mIn1.setDutyCycle(0lu);
+            mIn1.setDutyCycle(static_cast<uint32_t>(0));
             mIn2.setDutyCycle(static_cast<uint32_t>(-dutyCycleScl));
         }
     }

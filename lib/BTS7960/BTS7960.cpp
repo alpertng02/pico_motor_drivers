@@ -2,7 +2,7 @@
 
 #include "hardware/gpio.h"
 
-namespace Motor {
+namespace motor {
 
     BTS7960::BTS7960(uint lpwmPin, uint rpwmPin, uint32_t frequency, uint lis, uint ris) : mLpwm(lpwmPin, frequency), mRpwm(rpwmPin, frequency),
         mLis(lis), mRis(ris) {
@@ -22,9 +22,9 @@ namespace Motor {
     void BTS7960::setSpeed(int32_t dutyCycleScl) {
         if (dutyCycleScl >= 0) {
             mLpwm.setDutyCycle(static_cast<uint32_t>(dutyCycleScl));
-            mRpwm.setDutyCycle(0lu);
+            mRpwm.setDutyCycle(static_cast<uint32_t>(0));
         } else {
-            mLpwm.setDutyCycle(0lu);
+            mLpwm.setDutyCycle(static_cast<uint32_t>(0));
             mRpwm.setDutyCycle(static_cast<uint32_t>(-dutyCycleScl));
         }
     }
