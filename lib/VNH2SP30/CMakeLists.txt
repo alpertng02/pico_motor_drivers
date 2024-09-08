@@ -3,7 +3,6 @@ add_library(pico_VNH2SP30 INTERFACE)
 
 # Specify the source files for the pico-stepper library
 target_sources(pico_VNH2SP30 INTERFACE 
-    VNH2SP30.hpp
     VNH2SP30.cpp
 )
 
